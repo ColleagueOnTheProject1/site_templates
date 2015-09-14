@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="favicon.png" type="image/icon">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/select.0.1.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<meta name="viewport" content="width=1400">
+		<title></title>
+	</head>
+	<body>
+
+<style type="text/css">
+.content{width:670px;}
+.calc1 > .c{font-family:"Roboto";font-weight:100;font-size:15px;margin-bottom:5px;text-transform:uppercase;}
+.calc1 .wrapper{width:100%;display:table;background-color:#f0ede9;border-radius:4px;
+	border:1px solid #d9d9d9;box-sizing:border-box;border-collapse:collapse;
+}
+.calc1 .tr{display:table-row;}
+.calc1 .tr:first-child{height:100px;}
+.calc1 .tr:nth-child(2){height:80px;}
+.calc1 .tr:last-child{height:65px;}
+.calc1 .td{display:table-cell;box-sizing:border-box;padding:20px;}
+.calc1 .tr:not(:last-child){border-bottom:1px solid #d9d9d9;}
+.calc1 .td:not(:last-child){border-right:1px solid #d9d9d9;}
+.calc1 input.size{width:90px;height:27px;border-radius:4px;border:1px solid #d9d9d9;font-family:"Roboto";
+	font-weight:100;font-size:13px;box-sizing:border-box;padding-left:15px;
+}
+.calc1 .tb{display:table;width:100%;}
+.calc1 .tb1 .td{}
+.calc1 .t1{font-size:13px;font-family:"Roboto";margin-bottom:20px;}
+.calc1 .t2{font-size:13px;font-family:"Roboto";}
+.calc1 label{font-size:13px;font-family:"Roboto";font-weight:100;line-height:20px;vertical-align:top;}
+.calc1 .btn{width:91px;height:34px;border-radius:10px;border:1px solid #c8c8c8;border-bottom:none;
+	background-image: linear-gradient(to bottom, #f1f1f1, #cacaca);line-height:33px;
+	margin:0 auto;
+ }
+
+/*меню выбора варианта*/
+.select{display:table;position:relative;z-index:1;}
+.select .c{margin-right:10px;float:left;line-height:27px;}
+.select .field{border:1px solid #d9d9d9;border-radius:4px;float:left;
+	position:relative;box-sizing:border-box;
+	background-color:white;
+}
+.select input{width:46px;height:27px;border:0;padding:0 0 0 10px;font-family:inherit;background-color:rgba(0,0,0,0)}
+.select .open{width:13px;height:6px;position:absolute;top:0;bottom:0;right:6px;
+	margin:auto;z-index:2;display:inline-flex;
+}
+.select .open .line1{stroke:#545454; stroke-width:2px;}
+.select .open .line2{stroke:rgba(0,0,0,0.5); stroke-width:1px;}
+.select .items{width:100%;position:absolute;margin-top:5px;display:none;max-height:100px;overflow-y:auto;
+	border:inherit;box-sizing:inherit;background-color:inherit;border-radius:inherit;
+}
+.select .items .option{padding:3px 5px;}
+.select .items .option:hover{background-color:rgba(0,0,0,0.2);}
+.select .items .option:active{background-color:rgba(0,0,0,0.5);}
+.select .sf{position:absolute;z-index:3;width:100%;height:100%;top:0;}
+ /*select дополнительные настройки*/
+.select{float:left}
+.select:not(:last-child){margin-right:20px;}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".select .field").setSelect();
+	});
+</script>
+
+		<div class="content">
+			<div class="calc1">
+				<div class="c">Выбор по параметрам</div>
+				<div class="wrapper">
+					<div class="tr">
+						<div class="tb">
+							<div class="td" >
+								<div class="t1">Размер коробки (мм):</div>
+								<input class="size" name="length" placeholder="Длина:"/>
+								<input class="size" name="width" placeholder="Ширина:"/>
+								<input class="size" name="height" placeholder="Высота:"/>
+							</div>
+							<div class="td">
+								<div class="t1">Марка картона:</div>
+								<div class="select">	
+									<div class="c t2">Трехслойный</div>
+									<div class="field">
+										<input readonly/>
+										<div class="items">
+											<div class="option">T 22</div>
+										</div>
+										<div class="open">
+											<svg xmlns="http://www.w3.org/2000/svg" version="1.1">						
+												<line class="line1" x1="0" y1="0" x2="7" y2="5"/>
+												<line class="line1" x1="13" y1="0" x2="7" y2="5"/>
+											</svg>
+										</div>
+										<div class="sf"></div>
+									</div>
+								</div>		
+								<div class="select">	
+									<div class="c t2">Пятислойный</div>
+									<div class="field">
+										<input readonly/>
+										<div class="items">
+											<div class="option">T 22</div>
+										</div>
+										<div class="open">
+											<svg xmlns="http://www.w3.org/2000/svg" version="1.1">						
+												<line class="line1" x1="0" y1="0" x2="7" y2="5"/>
+												<line class="line1" x1="13" y1="0" x2="7" y2="5"/>
+											</svg>
+										</div>
+										<div class="sf"></div>
+									</div>
+								</div>																
+							</div>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="tb tb1">
+							<div class="td">
+								<div class="t1">Цвет картона:</div>
+								<input type="radio" id="Color1" name="color" class=""/>
+								<label for="Color1">Серый</label>
+								<input type="radio" id="Color2" name="color" class=""/>
+								<label for="Color2">Бурый</label>
+							</div>
+							<div class="td">
+								<div class="t1">Kоличество:</div>
+								<input type="radio" id="Count1" name="count" class=""/>
+								<label for="Count1">500</label>
+								<input type="radio" id="Count2" name="count" class=""/>
+								<label for="Count2">1000</label>
+								<input type="radio" id="Count3" name="count" class=""/>
+								<label for="Count3">5000</label>
+							</div>
+							<div class="td">
+								<div class="t1">Упаковка:</div>
+								<input type="radio" id="Pack1" name="pack" class=""/>
+								<label for="Pack1">На палет</label>
+								<input type="radio" id="Pack2" name="pack" class=""/>
+								<label for="Pack2">В пачках</label>
+							</div>						
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">
+							<div class="btn">Подобрать</div>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

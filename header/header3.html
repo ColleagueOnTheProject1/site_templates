@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="favicon.png" type="image/icon">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<meta name="viewport" content="width=1400">
+		<title></title>
+	</head>
+	<body>
+<style>
+.content2{width:1000px; margin-left:auto; margin-right:auto;position:relative;}
+/**/
+@keyframes move1 {
+  from {top:0;right:0;}
+  to {top:1px;right:1px;}
+}
+#Header{font-size:17px;display:table;padding:35px 0 25px;margin-bottom:25px;}
+#Header > div{display:table-cell;vertical-align:top;}
+
+#Header > div:not(:last-child):not(:first-child){padding-right:20px;}
+#Header > div:first-child{width:400px;}
+#Header > div:last-child{width:1px;padding-top:30px;}
+#Header .t1{font-size:16px;color:#448ccb;text-transform:uppercase;}
+#Header .t2{font-size:16px;color:#ed1c24;text-transform:uppercase;vertical-align:middle;line-height:12px;}
+#Header .t3{font-size:16px;white-space:nowrap;font-size:30px;}
+#Header .t4{color:#b6b6b6;font-size:24px;}
+#Header .t5{font-size:11px;text-align:center;}
+#Header .t6{font-size:10px;font-style:italic;color:#808080;text-align:right;}
+#Header .ct{font-weight:bold;}
+#Header .logo{}
+#Header .logo img{margin:0 auto;display:table;}
+#Header .logo a{text-decoration:none;display:table;}
+#Header .logo a:hover{transform:scale(1.02);}
+#Header .list{width:140px;}
+#Header .list a{text-decoration:none;border-bottom:1px dashed;font-size:16px;white-space:nowrap;line-height:19px;
+	font-style:italic;text-transform:uppercase;
+}
+#Header .list li{line-height:30px;}
+#Header .list li:hover{padding-left:3px;}
+#Header .list li:hover a{text-shadow:0 1px 1px rgba(0,0,0,0.5)}
+#Header .ctg1{width:170px;}
+#Header .ctg2{width:160px;}
+#Header .icon{position:relative;width:1px;line-height:10px;}
+#Header .icon .small{position:absolute;right:0;top:0;}
+
+#Header .wrapper{text-decoration:none;position:relative;display:table;}
+#Header .wrapper > div{display:table-cell;}
+#Header .wrapper > div:not(.t2){vertical-align:top;}
+#Header .wrapper > .icon + div{padding-left:10px;}
+#Header .cb{margin-bottom:20px;}
+#Header .cb.wrapper:hover .small{animation: move1 0.5s infinite linear;}
+#Header .pl.wrapper:hover .icon{transform:scale(1.1);}
+</style>
+		<div id="Header" class="content">
+			<div class="logo">
+				<a class="" href="/">
+					<img src="design/logo.png"/>
+					<div class="t5">скупка и продажа балок и труб б/у</div>
+				</a>				
+			</div>
+			<div class="ctg1">
+				<ul class="list">
+					<li><a class="" href="">О КОМПАНИИ</a></li>
+					<li><a class="" href="">кАТАЛОГ</a></li>
+					<li><a class="" href="">УСЛУГИ</a></li>
+				</ul>
+			</div>
+			<div class="ctg2">
+				<ul class="list">
+					<li><a class="" href="">О магазине</a></li>
+					<li><a class="" href="">Новости</a></li>
+					<li><a class="" href="">Сервис</a></li>
+					<li><a class="" href="">Оплата и доставка</a></li>
+				</ul>
+			</div>
+			<div class="" href="">
+				<a class="cb wrapper" href="">
+					<div class="icon" >
+						<img class="" src="design/phone1.png"/>
+						<img class="small" src="design/arrow1.png">
+					</div>
+					<div class="t1">Обратный<br/>звонок</div>				
+				</a>
+				<a class="pl wrapper" href="">
+					<div class="icon">
+						<img class="" src="design/icon4.png"/>
+					</div>					
+					<div class="t2">Прайс-лист</div>
+				</a>				
+			</div>
+			<div class="ct">
+				<div class="wrapper">
+					<div class="icon">
+						<img class="" src="design/phone2.png"/>
+					</div>			
+					<div class="">
+						<div class="t3"><font class="t4">8 800</font> 000-00-00</div>
+						<div class="t6">Бесплатный звонок по России</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

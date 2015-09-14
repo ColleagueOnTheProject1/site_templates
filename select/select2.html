@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="favicon.png" type="image/icon">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/jquery.select.0.2.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<meta name="viewport" content="width=1400">
+		<title></title>
+	</head>
+	<body>
+<style>
+textarea:focus, input:focus, select:focus{outline: none;}
+textarea:active, input:active, select:active{outline: none;}
+input::-ms-clear {width : 0;height: 0;}
+/*меню выбора варианта*/
+.select{display:table;position:relative;z-index:1;}
+.select .c{font-size:13px;color:#8f8f8f;margin-left:10px;margin-right:10px;float:left;line-height:30px;}
+.select .field{border:2px solid #c7c7c7;border-radius:5px;float:left;
+	position:relative;box-sizing:border-box;
+	background-color:white;
+}
+.select input{width:120px;height:30px;border:0;padding:0 0 0 10px;font-family:inherit;}
+.select .open{width:9px;height:5px;position:absolute;top:0;bottom:0;right:10px;
+	margin:auto;z-index:2;display:inline-flex;
+}
+.select .open polygon{stroke:rgba(241, 44, 44, 0.5); stroke-width:1px; fill:#f12b2c;}
+.select .items{width:100%;position:absolute;margin-top:5px;display:none;max-height:100px;overflow-y:auto;
+	border:inherit;box-sizing:inherit;background-color:inherit;border-radius:inherit;
+}
+.select .items .option{padding:3px 5px;}
+.select .items .option:hover{background-color:rgba(0,0,0,0.2);}
+.select .items .option:active{background-color:rgba(0,0,0,0.5);}
+.select .sf{position:absolute;z-index:3;width:100%;height:100%;top:0;}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".select .field").setSelect();
+	});
+</script>
+		<div class="select">	
+			<div class="c">Ширина:</div>
+			<div class="field">
+				<input readonly/>
+				<div class="items">
+					<div class="option">1</div>
+					<div class="option">2</div>
+					<div class="option">3</div>
+					<div class="option">4</div>
+					<div class="option">5</div>
+					<div class="option">6</div>
+				</div>
+				<div class="open">
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1">						
+						<polygon points="0,0 9,0 5,5"/>
+					</svg>
+				</div>
+				<div class="sf"></div>
+			</div>
+		</div>
+	</body>
+</html>
+

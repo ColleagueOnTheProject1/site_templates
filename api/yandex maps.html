@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="favicon.png" type="image/icon">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<!--Yandex maps-->
+		<script type="text/javascript" src="http://api-maps.yandex.ru/2.0/?coordorder=longlat&amp;load=package.full&amp;wizard=constructor&amp;lang=ru-RU"></script>
+		<meta name="viewport" content="width=1400">		
+		<title></title>
+	</head>
+	<body>
+<script type="text/javascript">	
+	$(document).ready(function(){
+		/*инициализация yandex карты*/
+		ymaps.ready(function() {		
+			var map = new ymaps.Map("ymaps-map-container", {center: [37.759946,55.635264], zoom: 14, type: "yandex#map"});
+			map.controls.add("zoomControl");
+				myPlacemark = new ymaps.Placemark([37.759946,55.635264]);	
+				// Добавляем метку на карту
+				map.geoObjects.add(myPlacemark);
+		});		
+	});
+</script>
+<style type="text/css">
+#ymaps-map-container{width:100%;height:400px;}
+</style>
+		<div id="ymaps-map-container"></div>
+	</body>
+</html>

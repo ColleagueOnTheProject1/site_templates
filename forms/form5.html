@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="favicon.png" type="image/icon">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<!-- аналог select на jquery-->
+		<script type="text/javascript" src="js/jquery.select.0.3.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<meta name="viewport" content="width=1400">
+		<title></title>
+	</head>
+	<body>
+<style type="text/css">
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic");
+body{font-family:"Arial"}
+h1{margin:0; padding:0; font-size:14px; text-transform:uppercase; }
+.content{width:814px;}
+.total.cs{font-weight:normal; font-size:30px; }
+.total.c-data{color:#d5d5d5; font-size:10px; }
+textarea:focus, input:focus, select:focus{outline: none;}
+textarea:active, input:active, select:active{outline: none;}
+input::-ms-clear {width : 0;height: 0;}
+/*меню выбора варианта*/
+.select{display:table;position:relative;z-index:1;}
+.select .c{font-size:12px;margin-right:10px;line-height:42px;
+	margin-bottom:15px;
+	white-space:nowrap;
+}
+.select .field{
+	border-radius:5px;
+	position:relative;box-sizing:border-box;
+	background-color:white;
+}
+.select input{height:42px;}
+.select input, .select textArea{width:420px;padding:0 0 0 15px;font-family:inherit;
+	border:none;
+	font-size:18px;
+	color:#404040;
+	font-weight:bold;
+	text-transform:uppercase;
+	border-radius:inherit;
+}
+.select textArea{height:98px;resize:none;box-sizing:border-box;padding-top:10px;}
+.select .open{width:20px;height:12px;position:absolute;top:0;bottom:0;right:10px;
+	margin:auto;z-index:2;display:inline-flex;
+}
+.select .items{width:100%;position:absolute;margin-top:5px;display:none;max-height:100px;overflow-y:auto;
+	border:inherit;box-sizing:inherit;background-color:inherit;border-radius:inherit;
+}
+.select .items .option{padding:3px 5px;}
+.select .items .option:hover{background-color:rgba(0,0,0,0.2);}
+.select .items .option:active{background-color:rgba(0,0,0,0.5);}
+.select .sf{position:absolute;z-index:3;width:100%;height:100%;top:0;}
+
+.select.m1{float:left;}
+.select.m1:before{content:"";
+	width:1px;height:90%;
+	position:absolute;
+	top:0;bottom:0;right:34px;margin:auto;
+	background-color:#b3b3b3;
+	z-index:3;	
+}
+.select.l .c{float:left;margin-bottom:0px;}
+.select.l .field{float:left;} 
+.select.m2{float:right;}
+.select.m2 input{width:101px;text-align:center;padding:0;}
+.select.m3 input{width:70px;}
+.select.m3 .c{float:left;margin-bottom:0px;} 
+.select.m3 .field{float:left;} 
+.select.m4 input{width:140px;}
+.select.m5 input{width:85px;}
+.select.m6{float:right;}
+.select.m6 input{width:544px;text-align:left;}
+.select.m7 {width:100%;}
+.select.m7 input{width:100%;}
+.select.m7 textArea{width:100%;}
+.select.m8 input{padding:0 15px;width:auto;}
+.select.m8 .c{float:left;margin-bottom:0px;} 
+.select.m8 .field{float:left;} 
+
+/*форма отправки*/
+.sendForm{background-color:#c7ebf5;padding:35px 30px;}
+.sendForm .c1{font-size:16px;line-height:16px; color:#4a6a73;font-weight:bold;font-style:italic;margin-bottom:20px;}
+.sendForm .c2{
+	font-size:12px;
+	line-height:42px;
+	margin-bottom:15px;
+	white-space:nowrap;
+	float:left;
+}
+.sendForm .cs{text-transform:none;}
+.sendForm .c-data{color:#74bbce; }
+.sendForm .hr{width:100%;height:1px;background-color:white;margin:20px 0;}
+.sendForm .date{margin-top:14px;}
+.sendForm .date .select{margin-right:10px;}
+.sendForm .date .field:before{content:"";position:absolute;top:-20px;right:40px;margin:auto;font-size:10px;}
+
+.sendForm .time{margin-top:14px;float:left;}
+.sendForm .time .select{margin-right:30px;}
+.sendForm .time .select:first-child{margin-right:40px;}
+.sendForm .time.end{float:right;}
+.sendForm .time .field:before{content:"";position:absolute;top:0px;bottom:0;right:-30px;margin:auto;font-size:10px;
+	height:10px;line-height:10px;
+}
+
+.sendForm .day .field:before{content:"день";}
+.sendForm .month .field:before{content:"месяц";}
+.sendForm .year .field:before{content:"год";}
+.sendForm .hour .field:before{content:"час.";}
+.sendForm .minute .field:before{content:"мин.";}
+
+.sendForm .ct > div{float:left}
+.sendForm .ct > div:first-child{margin-right:20px;}
+.sendForm .ct > div:last-child{float:right}
+.sendForm .btn{
+	text-transform:uppercase;font-size:18px;
+	border:none;
+	background-image:linear-gradient(to bottom, #ffbd00, #ff9200);
+	width:210px;height:42px;
+	border-radius:6px;
+	box-shadow:0 0 4px rgba(0,0,0,0.3);
+	margin:0 auto;
+	font-family:"Roboto";
+	cursor:pointer;
+	text-shadow:0 1px 0 rgba(255,255,255,0.6);
+}
+.sendForm .btn:hover{transform:scale(1.04);}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".select .field").setSelect({hideObjects:".select .field .items"});
+	});
+</script>
+		<div class="content">
+			<form class="sendForm">
+				<h1 class="cs total">Оформление заявки на транспортное обслуживание</h1>
+				<div class="c-data total">ADT прокат</div>
+				<div class="hr"></div>
+				<div class="c1">Класс автомобиля:</div>
+				<div class="null"></div>
+				<div class="select m1">						
+					<div class="field">
+						<input readonly/>
+						<div class="items">
+							<div class="option">Subaru impreza WRX STi</div>
+						</div>
+						<div class="open">
+							<img src="design/select.png"/>
+						</div>
+						<div class="sf"></div>
+					</div>
+				</div>				
+				<div class="select m2 l">	
+					<div class="c">Количество пассажиров:</div>
+					<div class="field">
+						<input value="55"/>
+					</div>						
+				</div>
+				<div class="null"></div>
+				<div class="hr"></div>
+				<div class="c1">Дата и время подачи транспорта:</div>
+				<div class="null"></div>
+				<div class="date">
+					<div class="select m1 m3 day">	
+						<div class="c">Дата подачи транспорта:</div>
+						<div class="field">
+							<input readonly/>
+							<div class="items">
+								<div class="option">32</div>
+								<div class="option">31</div>
+							</div>
+							<div class="open">
+								<img src="design/select.png"/>
+							</div>
+							<div class="sf"></div>
+						</div>						
+					</div>	
+					<div class="select m1 m3 m4 month">	
+						<div class="field">
+							<input readonly/>
+							<div class="items">
+								<div class="option">декабря</div>
+							</div>
+							<div class="open">
+								<img src="design/select.png"/>
+							</div>
+							<div class="sf"></div>
+						</div>						
+					</div>	
+					<div class="select m1 m3 m5 year">	
+						<div class="field">
+							<input readonly/>
+							<div class="items">
+								<div class="option">2018</div>
+							</div>
+							<div class="open">
+								<img src="design/select.png"/>
+							</div>
+							<div class="sf"></div>
+						</div>						
+					</div>	
+					<div class="null"></div>
+				</div>
+				<div class="hr"></div>
+				<div class="time">
+					<div class="select m1 m3 hour">	
+						<div class="c">Время подачи:</div>
+						<div class="field">
+							<input readonly/>
+							<div class="items">
+								<div class="option">13</div>
+							</div>
+							<div class="open">
+								<img src="design/select.png"/>
+							</div>
+							<div class="sf"></div>
+						</div>						
+					</div>	
+					<div class="select m1 m3 minute">	
+						<div class="field">
+							<input readonly/>
+							<div class="items">
+								<div class="option">00</div>
+							</div>
+							<div class="open">
+								<img src="design/select.png"/>
+							</div>
+							<div class="sf"></div>
+						</div>						
+					</div>	
+					<div class="null"></div>
+				</div>
+				<div class="time end">
+					<div class="select m1 m3 m5 hour">	
+						<div class="c">Время окончания:</div>
+						<div class="field">
+							<input readonly/>
+							<div class="items">
+								<div class="option">19</div>
+							</div>
+							<div class="open">
+								<img src="design/select.png"/>
+							</div>
+							<div class="sf"></div>
+						</div>						
+					</div>	
+					<div class="select m1 m3 minute">	
+						<div class="field">
+							<input readonly/>
+							<div class="items">
+								<div class="option">10</div>
+							</div>
+							<div class="open">
+								<img src="design/select.png"/>
+							</div>
+							<div class="sf"></div>
+						</div>						
+					</div>	
+					<div class="null"></div>
+				</div>
+				<div class="null"></div>
+				<div class="hr"></div>
+				<div class="c1">Маршрут следования:</div>
+				<div class="c2">Адрес места подачи транспорта:</div>
+				<div class="select m6 l">	
+					<div class="field">
+						<input placeholder="г. Москва, Красная площадь, д. 1"/>
+					</div>
+				</div>
+				<div class="null"></div>
+				<div class="c2">Маршрут следования:</div>
+				<div class="select m6 l">						
+					<div class="field">
+						<input placeholder="до магазина и обратно"/>
+					</div>
+				</div>
+				<div class="null"></div>
+				<div class="hr"></div>
+				<div class="c1">Дополнительная информация:</div>
+				<div class="select m7">						
+					<div class="field">
+						<textArea></textArea>
+					</div>
+				</div>
+				<div class="hr"></div>
+				<div class="c1">Контактная информация:</div>
+				<div class="ct">
+					<div class="select m8">	
+						<div class="c">Ваше имя:</div>
+						<div class="field">
+							<input size="9" placeholder="Владимир"/>
+						</div>						
+					</div>
+					<div class="select m8">	
+						<div class="c">Телефон:</div>
+						<div class="field">
+							<input size="9" placeholder="89169999999"/>
+						</div>						
+					</div>
+					<div class="select m8">	
+						<div class="c">E-mail:</div>
+						<div class="field">
+							<input size="14" placeholder="nekto@mail.ru"/>
+						</div>
+					</div>
+				</div>
+				<div class="null"></div>
+				<div class="hr"></div>
+				<input type="submit" class="btn" value="Заказать"></div>
+			</form>		
+		</div>
+	</body>
+</html>

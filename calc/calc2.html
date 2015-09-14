@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="favicon.png" type="image/icon">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<!-- поля выбора или аналог select -->
+		<script type="text/javascript" src="js/jquery.select.0.2.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<meta name="viewport" content="width=1400">
+		<title></title>
+	</head>
+	<body>
+
+<style type="text/css">
+body{color:white;font-family:"Arial"}
+h5{font-size:26.5px;
+	color:white;text-transform:uppercase;letter-spacing:1px;
+}
+.content{width:670px;}
+/*калькулятор*/
+.calc1{padding:24px 37px;background-color:#939393;}
+.calc1 .wrapper{width:550px;}
+.calc1 > .c{margin-bottom:25px;}
+.calc1 input.size{width:90px;height:27px;border-radius:4px;border:1px solid #d9d9d9;
+	font-weight:100;font-size:13px;box-sizing:border-box;padding-left:15px;
+}
+.calc1 .btn{
+	height:36px;
+	border-radius:4px;
+	background-color:#faa41d;
+	padding:0 15px;
+	display:table;
+	line-height:35px;
+	margin:40px 0 25px;
+	box-shadow:inset 0px -4px 0px 0px rgba(0,0,0,0.12);
+ }
+
+/*меню выбора варианта*/
+.select{display:table;position:relative;z-index:1;}
+.select .c{margin-right:10px;line-height:27px;font-weight:bold;}
+.select .field{
+	color:black;
+	border:1px solid #d9d9d9;border-radius:2px;
+	position:relative;
+	box-sizing:border-box;
+	background-color:white;
+}
+.select input{
+	width:201px;height:32px;
+	border:none;
+	padding:0 5px;
+	box-sizing:border-box;
+	font-family:inherit;
+	background-color:rgba(0,0,0,0);
+	
+}
+.select .open{width:6px;height:6px;position:absolute;top:0;bottom:0;right:6px;
+	margin:auto;z-index:2;display:inline-flex;
+}
+.select .open polygon{fill:#000000;}
+.select .items{width:100%;position:absolute;margin-top:5px;display:none;max-height:100px;overflow-y:auto;
+	border:inherit;box-sizing:inherit;background-color:inherit;border-radius:inherit;
+}
+.select .items .option{padding:3px 5px;}
+.select .items .option:hover{background-color:rgba(0,0,0,0.2);}
+.select .items .option:active{background-color:rgba(0,0,0,0.5);}
+.select .sf{position:absolute;z-index:3;width:100%;height:100%;top:0;}
+ /*select дополнительные настройки*/
+.select{float:left;margin-right:37px;}
+.select:nth-last-child(n + 3){margin-bottom:15px;}
+.select:nth-child(1){z-index:4;}
+.select:nth-child(2){z-index:3;}
+.select:nth-child(3){z-index:2;}
+.select:nth-child(4){z-index:1;}
+.select .t3{position:absolute;right:-23px;line-height:32px;}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		if($(".select")[0])
+			$(".select .field").setSelect({
+				hideObjects:".select .field .items"
+			});
+	});
+</script>
+
+		<div class="content">
+			<div class="calc1">
+				<h5 class="c">калькулятор доставки бетона</h5>
+				<div class="wrapper">				
+					<div class="select">	
+						<div class="c t2">Марка бетона</div>
+						<div class="field">
+							<input readonly/>
+							<div class="items">
+								<div class="option">выбор1</div>
+								<div class="option">выбор2</div>
+							</div>
+							<div class="open">
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+									<polygon points="0,0 5,0 3,5 2,5"/>
+								</svg>
+							</div>
+							<div class="sf"></div>
+						</div>
+					</div>		
+					<div class="select">	
+						<div class="c t2">Раствор</div>
+						<div class="field">
+							<input readonly/>
+							<div class="items">
+								<div class="option">выбор1</div>
+							</div>
+							<div class="open">
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+									<polygon points="0,0 5,0 3,5 2,5"/>
+								</svg>
+							</div>
+							<div class="sf"></div>
+						</div>
+					</div>		
+					<div class="select">							
+						<div class="c t2">Количество</div>
+						<div class="t3">m<sup>3</sup></div>
+						<div class="field">
+							<input readonly/>
+							<div class="items">
+								<div class="option">выбор1</div>
+							</div>
+							<div class="open">
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+									<polygon points="0,0 5,0 3,5 2,5"/>
+								</svg>
+							</div>
+							<div class="sf"></div>
+						</div>
+						
+					</div>		
+					<div class="select">	
+						<div class="c t2">Адрес доставки</div>
+						<div class="field">
+							<input readonly/>
+							<div class="items">
+								<div class="option">выбор1</div>
+							</div>
+							<div class="open">
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+									<polygon points="0,0 5,0 3,5 2,5"/>
+								</svg>
+							</div>
+							<div class="sf"></div>
+						</div>
+					</div>		
+				</div>
+				<div class="null"></div>
+				<div class="btn">Расчитать</div>
+				<div class="totally">Итого: <font class="value"></font></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="favicon.png" type="image/icon">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<!-- slider-->
+		<link rel="stylesheet" href="css/lightSlider.css" type="text/css">
+		<script type="text/javascript" src="js/jquery.lightSlider.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<meta name="viewport" content="width=1400">
+		<title></title>
+	</head>
+	<body>
+<style>
+.content{width:1000px;}
+/*slider*/
+.slider1 {width:100%;min-height:506px;position:relative;}
+.slider1 .lSSlideOuter{position:absolute;top:0;width:100%;height:inherit;}
+.slider1 .lSSlideWrapper{height:506px;}
+.slider1 .items:not(.lSSlide){position:absolute;top:0;display:table;width:100%;}
+.slider1 .items .img{width:100%;height:454px;background:no-repeat center top;}
+.slider1 .items:not(.lSSlide) li:not(.clone):not(:first-child){display:none;}
+.slider1 .items:not(.lSSlide) li{width:inherit;}
+.slider1 .lSAction a{width:30px;height:60px;opacity:1;top:0;bottom:0;margin:auto;}
+.slider1 .lSPrev{background:url("design/prev.png")no-repeat;}
+.slider1 .lSNext{background:url("design/next.png")no-repeat;}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	if(".slider1 .items")[0]
+		$(".slider1 .items").lightSlider({
+			item:1,
+			auto:false,
+			pause:5000,
+			loop:false,
+			pager:false
+		});
+});
+</script>
+		<div class="content">
+			<div class="slider1">
+				<ul class="items">
+					<li><div class="img" style="background-image:url(design/slide1.jpg);"></div></li>
+					<li><div class="img" style="background-image:url(design/slide2.jpg);"></div></li>
+					<li><div class="img" style="background-image:url(design/slide3.jpg);"></div></li>
+				</ul>
+			</div>	
+		</div>
+	</body>
+</html>

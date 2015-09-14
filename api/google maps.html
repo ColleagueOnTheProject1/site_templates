@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="favicon.png" type="image/icon">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<!--Google maps-->
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<meta name="viewport" content="width=1400">		
+		<title></title>
+	</head>
+	<body>
+<script type="text/javascript">
+	/*инициализация google карты*/
+	function mapInit() {     
+	var myLatlng = new google.maps.LatLng(55.77479, 38.70042);
+	var myOptions = {
+		zoom: 17,
+		center: myLatlng,
+		scrollwheel:false,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	var map = new google.maps.Map(document.getElementById("Map"), myOptions); 
+	var marker = new google.maps.Marker({
+		position: myLatlng,
+		map: map,
+		title:"Московская область, г. Павловский Посад, Корнево-Юдинский пер. дом 2/3",
+		icon: '../design/map-marker.png'
+	});
+}
+$(document).ready(function(){
+	/*инициализация google карты*/
+		if($(".map")[0]){
+			mapInit();
+		}
+
+});
+</script>
+<style type="text/css">
+#Map{height:400px;width:100%;}
+</style>
+		<div class="map" id="Map">
+
+		</div>
+	</body>
+</html>

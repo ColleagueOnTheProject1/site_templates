@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="favicon.png" type="image/icon">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/tabulator.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<meta name="viewport" content="width=1400">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".tabulator3").tabulator();
+			})
+		</script>
+<style>
+.content{width:1000px; margin-left:auto; margin-right:auto;position:relative;}
+/*панель со вкладками*/
+.tabulator3{}
+.tabulator3 > .items{width:100%;height:238px;
+	position:relative;z-index:1;background-color:white;display:table;
+}
+.tabulator3 > .items > .item{height:inherit;}
+.tabulator3 > .items > .item:not(.active){display:none;}
+
+.tabulator3 .tabs{height:45px;margin:0 auto 50px;display:table;}
+.tabulator3 .tab{height:inherit;border-radius:4px;
+	position:relative;float:left;display:table;
+	padding:0 10px;
+}
+.tabulator3 .tab:not(:last-child){margin-right:35px;}
+.tabulator3 .tab .decor{position:absolute;bottom:-6px;left:0;right:0px;width:14px;height:7px;
+	fill:#171717;margin:0 auto;display:none;
+}
+.tabulator3 .tab.active .decor{display:block;}
+.tabulator3 .tab .t{font-size:18px;display:table-cell;text-align:center;vertical-align:middle;
+	font-weight:bold;cursor:pointer;color:#f01e1f;
+}
+.tabulator3 .tab .t1{border-bottom:1px dashed #fcd2d2;display:inline;}
+.tabulator3 .tab.active{background-color:#171717;}
+.tabulator3 .tab.active .t{color:white;}
+.tabulator3 .tab.active .t1{border-bottom:none;}
+/*это не надо копировать*/
+.tabulator3{margin-top:10px;}
+</style>
+                    
+		<div class="content">
+			<div class="tabulator3">
+				<div class="tabs">
+					<div class="tab active">
+						<svg class="decor">
+							<polygon points="0,0, 14,0 7,7"/>
+						</svg>
+						<div class="t"><div class="t1">Новинки</div></div>
+					</div>
+					<div class="tab">
+						<svg class="decor">
+							<polygon points="0,0, 14,0 7,7"/>
+						</svg>
+						<div class="t"><div class="t1">Распродажа</div></div>
+					</div>
+					<div class="tab">
+						<svg class="decor">
+							<polygon points="0,0, 14,0 7,7"/>
+						</svg>
+						<div class="t"><div class="t1">Хиты продаж</div></div>
+					</div>
+				</div>
+				<div class="items">
+					<div class="item active">	
+					1
+					</div>
+					<div class="item">		
+					2
+					</div>
+					<div class="item">		
+					3
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

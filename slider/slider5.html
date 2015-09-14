@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="favicon.png" type="image/icon">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<!-- отсюда мы берем двигатель элементов-->
+		<script type="text/javascript" 		 src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
+		<!-- подключаем скроллбар для прокрутки страницы-->
+		<script type="text/javascript" src="js/jquery.hScroll.js"></script>
+		<meta name="viewport" content="width=1400">
+		<title></title>
+	</head>
+	<body>
+<style type="text/css">
+.content{width:1100px;}
+.content2{width:1000px;margin:0 auto;}
+/*slider*/
+.slider .wrapper{width:100%;overflow:hidden;height:45px;position:relative;}
+.slider .items{display:table;}
+.slider .items a{display:table-cell;color:transparent;border:none;text-decoration:none;}
+.slider .items a{padding-right:40px;}
+/*scrollbar*/
+.hScroll{position:relative;width:100%;background-color:white;display:table;height:11px;margin-top:40px;}
+.hScroll .wrapper{position:relative;margin:auto;height:inherit;width:95%;}
+.hScroll .bar{
+	background-color:#c6c6c6;
+	height:3px;
+	width:100%;
+	position:absolute;
+	left:0;
+	right:0;
+	margin:auto;
+	top:0;
+	bottom:0;
+}
+.hScroll .scroll{
+	height:1px;
+	border:1px solid #f7eee5;
+	border-left:none;
+	border-right:none;
+	background-color:#ff5300;
+	width:50px;
+	display:table;
+	position:absolute;
+	z-index:2;
+	margin:auto;
+	top:0;
+	bottom:0;
+
+}
+.hScroll .prev{position:absolute;top:0;left:0px;}
+.hScroll .next{position:absolute;top:0;right:0px;}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".slider").hScroll();
+	});
+</script>
+		<div class="content">
+			<div class="slider">
+				<div class="wrapper">
+					<div class="items scrolled">
+						<a class="" href="">
+							<img class="" src="../design/img4_1.png"/>
+						</a>
+						<a class="" href="">
+							<img class="" src="../design/img4_1.png"/>
+						</a>
+						<a class="" href="">
+							<img class="" src="../design/img4_1.png"/>
+						</a>
+						<a class="" href="">
+							<img class="" src="../design/img4_1.png"/>
+						</a>
+						<a class="" href="">
+							<img class="" src="../design/img4_1.png"/>
+						</a>
+						<a class="" href="">
+							<img class="" src="../design/img4_1.png"/>
+						</a>
+						<a class="" href="">
+							<img class="" src="../design/img4_1.png"/>
+						</a>
+						<a class="" href="">
+							<img class="" src="../design/img4_1.png"/>
+						</a>
+						<a class="" href="">
+							<img class="" src="../design/img4_1.png"/>
+						</a>
+					</div>					
+				</div>
+				<div class="hScroll scrollbar">
+					<div class="wrapper">
+						<div class="bar"></div>
+						<img class="scroll" src="design/scroll.png"/>						
+					</div>
+					<img class="prev" src="../design/prev.png"/>
+					<img class="next" src="../design/next.png"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

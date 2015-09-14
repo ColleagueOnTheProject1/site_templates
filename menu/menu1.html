@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="favicon.png" type="image/icon">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<meta name="viewport" content="width=1400">
+		<title></title>
+	</head>
+	<body>
+<style>
+p{white-space:pre-line;}
+/*menu*/
+.menu{background-color:#171717;margin-bottom:20px;}
+.menu ul{display:table;}
+.menu li{list-style-type:none;float:left;}
+.menu li:hover{background-color:rgba(64,64,64,0.4);}
+.menu li{padding-right:15px;}
+.menu li a{text-transform:uppercase;line-height:40px;color:white;text-decoration:none;
+	font-family:inherit;
+}
+/**menu2*/
+.menu2{
+	background-color:silver;
+	display:table;
+	margin-bottom:106px;
+	position:relative;
+	z-index:100;}
+.menu2 li{float:left;position:relative;margin:0 14px;list-style-type:none;}
+.menu2 a{
+	padding:0 12px;
+	line-height:45px;
+	text-decoration:none;
+	display:block;
+	white-space:nowrap;
+	color:#3e454a;
+	font-family:"Roboto";
+	font-size:18px;}
+.menu2 li > a{text-transform:uppercase;}
+.menu2 li:hover a{background-color:#df110b;color:white;}
+.menu2 li .sub{
+	display:none;
+	background-color:#df110b;
+	position:absolute;
+	left:0;
+	top:100%;
+	padding:8px 13px 23px 2px;}
+.menu2 li .sub a{line-height:36px;}
+.menu2 li .sub a:hover{background-color:#cf110b}
+.menu2 li:hover .sub{display:table;}
+
+</style>
+		<div class="content">
+			<p class="">
+				горизонтальная менюшака. Основные особенности:
+				-задний фон
+				-одинаковый отступ справа
+			</p>
+			<div class="menu">
+				<div class="content2">			                
+					<ul class="">
+						<li><a class="" href="">О магазине</a></li>
+						<li><a class="" href="">Новости</a></li>
+						<li><a class="" href="">Сервис</a></li>
+						<li><a class="" href="">Оплата и доставка</a></li>
+						<li><a class="" href="">Контакты</a></li>
+					</ul>
+				</div>
+			</div>		
+			<p class="">
+				горизонтальная менюшака. Основные особенности:
+				-задний фон
+				-одинаковое расстояние между элементами
+				-выпадающий список
+			</p>
+			<ul class="menu2">
+				<li><a class="" href="">ОПЛАТА И ЦЕНЫ</a></li>
+				<li><a class="" href="">О КОМПАНИИ</a></li>
+				<li><a class="" href="">УСЛУГИ</a></li>
+				<li><a class="" href="">ПРОДУКЦИЯ</a></li>
+				<li><a class="" href="">АКЦИИ</a></li>
+				<li class="">
+					<a href="">ДЛЯ ДИЛЕРОВ</a>
+					<div class="sub">
+						<a class="" href="">Наш буклет</a>
+						<a class="" href="">Обращение генерального директора</a>
+					</div>
+				</li>
+				<li>
+					<a class="" href="">КОНТАКТЫ</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
