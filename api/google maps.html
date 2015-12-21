@@ -13,24 +13,24 @@
 <script type="text/javascript">
 	/*инициализация google карты*/
 	function mapInit() {     
-	var myLatlng = new google.maps.LatLng(55.77479, 38.70042);
-	var myOptions = {
-		zoom: 17,
-		center: myLatlng,
-		scrollwheel:false,
-		mapTypeId: google.maps.MapTypeId.ROADMAP
+		var myLatlng = new google.maps.LatLng(55.77479, 38.70042);
+		var myOptions = {
+			zoom: 17,
+			center: myLatlng,
+			scrollwheel:false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(document.getElementById("Map"), myOptions); 
+		var marker = new google.maps.Marker({
+			position: myLatlng,
+			map: map,
+			title:"Московская область, г. Павловский Посад, Корнево-Юдинский пер. дом 2/3",
+			icon: '../design/map-marker.png'
+		});
 	}
-	var map = new google.maps.Map(document.getElementById("Map"), myOptions); 
-	var marker = new google.maps.Marker({
-		position: myLatlng,
-		map: map,
-		title:"Московская область, г. Павловский Посад, Корнево-Юдинский пер. дом 2/3",
-		icon: '../design/map-marker.png'
-	});
-}
 $(document).ready(function(){
 	/*инициализация google карты*/
-		if($(".map")[0]){
+		if(document.getElementById('map')){
 			mapInit();
 		}
 

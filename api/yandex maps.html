@@ -13,10 +13,12 @@
 <script type="text/javascript">	
 	$(document).ready(function(){
 		/*инициализация yandex карты*/
-		ymaps.ready(function() {		
-			var map = new ymaps.Map("ymaps-map-container", {center: [37.759946,55.635264], zoom: 14, type: "yandex#map"});
-			map.controls.add("zoomControl");
-				myPlacemark = new ymaps.Placemark([37.759946,55.635264]);	
+		if(document.getElementById('ymaps-map-container'))
+		ymaps.ready(function() {
+			var center = [37.759946,55.635264];
+			var map = new ymaps.Map('ymaps-map-container', {'center':center , 'zoom': 14, 'type': 'yandex#map'});
+			map.controls.add('zoomControl');
+				myPlacemark = new ymaps.Placemark(center);	
 				// Добавляем метку на карту
 				map.geoObjects.add(myPlacemark);
 		});		
