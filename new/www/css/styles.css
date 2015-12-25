@@ -25,8 +25,11 @@ textarea:active, input:active, select:active{outline: none;}
 input{font-size:inherit;box-sizing:border-box;border-width:1px;margin:0;}
 input::-ms-clear {width : 0;height: 0;}
 button{cursor:pointer;}
+/*fixes*/
 .null {height: 0px; min-height: 0px; line-height: 0px; font-size: 0px; overflow: hidden; clear: both;}
-.allocate{text-align:justify;font-size:1px;}
+.clear-size{font-size:0.01px;}
+/*распределение по ширине контента*/
+.allocate{text-align:justify;font-size:0.01px;}
 .allocate > *{display:inline-block;text-align:left;vertical-align:top;}
 .allocate:after{content:"";width:100%;display:inline-block;}
 /**равномерное распределение по горизонтали табличным блоком*/
@@ -37,20 +40,17 @@ button{cursor:pointer;}
 .t-allocate-h-v{display:table;}
 .t-allocate-h-v > *{display:table-cell;vertical-align:middle;}
 .t-allocate-h-v >*:last-child{width:1px;white-space:nowrap;}
-/**/
+/*placement*/
 .relative{position:relative;}
 .to-right{text-align:right;}
-.tb{display:table;}
-.td{display:table-cell;}
-.tr{display:table-row;}
 .inline-top{display:inline-block;vertical-align:top;}
 .inline-child > *{display:inline-block;vertical-align:top;}
 .inline-middle > *{display:inline-block;vertical-align:middle;}
 .centred-child{text-align:center;}
 .centred-child > *{display:inline-block;vertical-align:top;text-align:left;}
-.p-link{text-decoration:none;border-bottom:1px dashed;cursor:pointer;}
 .mirrorX{transform:scaleX(-1);-webkit-transform:scaleX(-1);}
 .mirrorY{transform:scaleY(-1);-webkit-transform:scaleY(-1);}
+/**/
 .modal{
 	display:none;
 	top:0;left:0;
@@ -62,20 +62,25 @@ button{cursor:pointer;}
 	text-align:center;}
 .modal:after{height:100%;content:"";display:inline-block;vertical-align:middle;}
 .modal > div{display:inline-block;vertical-align:middle;}
-
+/*quick use*/
+.tb{display:table;}
+.td{display:table-cell;}
+.tr{display:table-row;}
+/*content greed*/
 .content{width:1100px; margin-left:auto; margin-right:auto;position:relative;box-sizing:border-box;}
 .content2{width:100%; position:relative;box-sizing:border-box;}
-/*other*/
+/*distinct*/
+.p-link{text-decoration:none;border-bottom:1px dashed;cursor:pointer;}
+/*buttons*/
 /*fields*/
-
+/*forms*/
 /*items*/
 /*sliders*/
 /*menu*/
 .menu{}
-/*header*/
+.nav{}
+/*blocks*/
 header{}
-/**/
 .page{}
-/*footer*/
 footer{}
 /*color scheme - цветовые схемы*/
