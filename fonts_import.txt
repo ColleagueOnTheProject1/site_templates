@@ -1,0 +1,54 @@
+<link href='http://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+
+PT Sans
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic&subset=latin,cyrillic);
+
+KellyvSlab
+@import url(http://fonts.googleapis.com/css?family=Kelly+Slab&subset=latin,cyrillic);
+
+Roboto: normal medium bold
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic);
+
+Roboto Slab: normal bold light
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,&subset=latin,cyrillic);
+
+Roboto Condensed: normal bold
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin,cyrillic);
+
+Open Sans
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic);
+Open Sans Condensed
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic);
+
+Jura
+@import url(http://fonts.googleapis.com/css?family=Jura&subset=latin,cyrillic);
+
+
+Russo One
+@import url(http://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic);
+
+Days One
+@import url(http://fonts.googleapis.com/css?family=Days+One);
+
+Ubuntu
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
+font-family: 'Ubuntu', sans-serif;
+
+Lora
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700);
+
+Crystal
+@import url(http://allfont.ru/allfont.css?fonts=crystal);
+
+ @import url(http://allfont.ru/allfont.css?fonts=source-sans-pro);
+ @import url(http://allfont.ru/allfont.css?fonts=source-sans-pro-light);
+ @import url(http://allfont.ru/allfont.css?fonts=source-sans-pro-bold);
+
+ 
+@import url(https://fonts.googleapis.com/css?family=Play:400,700);
+font-family: 'Play', sans-serif;
+
+@import url(https://fonts.googleapis.com/css?family=Comfortaa);
+font-family: 'Comfortaa', cursive;
